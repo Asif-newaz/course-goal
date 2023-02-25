@@ -1,0 +1,45 @@
+.parent-container {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 30rem;
+  max-width: 90%;
+  margin: 3rem auto;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.header {
+  color: brown;
+  text-align: center;
+}
+
+.wrapper label {
+  text-align: left;
+  display: block;
+  padding-bottom: 0.25rem;
+}
+
+.wrapper input,
+.wrapper textarea,
+.wrapper select {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.wrapper button {
+  background-color: #f1356d;
+  margin-top: 0.5rem;
+  padding: 8px;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
