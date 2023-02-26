@@ -3,14 +3,21 @@ import "./WebForm.css";
 
 const WebForm = () => {
   const [title, setTitle] = useState("");
-  const [blog, setBlog] = useState("");
+  const [body, setBody] = useState("");
   const [author, setAuthor] = useState("");
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    const blog = { title, body, author };
+    console.log(blog);
+  };
 
   return (
     <div className="parent-container">
       <div className="wrapper">
         <h1 className="header">Web Form</h1>
-        <form>
+        <form onSubmit={submitHandler}>
           <label>Blog title:</label>
           <input
             type="text"
@@ -22,8 +29,8 @@ const WebForm = () => {
           <textarea
             type="text"
             required
-            value={blog}
-            onChange={(e) => setBlog(e.target.value)}
+            value={body}
+            onChange={(e) => setBody(e.target.value)}
           ></textarea>
           <label>Blog author:</label>
           <select value={author} onChange={(e) => setAuthor(e.target.value)}>
@@ -31,9 +38,6 @@ const WebForm = () => {
             <option value="lisa">Lisa</option>
           </select>
           <button>Add blog</button>
-          <p>{title}</p>
-          <p>{blog}</p>
-          <p>{author}</p>
         </form>
       </div>
     </div>
