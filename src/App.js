@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import CourseGoalList from "./components/CourseGoals/CourseGoalList/CourseGoalList";
 import CourseInput from "./components/CourseGoals/CourseInput/CourseInput";
-import WebForm from "./components/WebForm/WebForm";
+// import WebForm from "./components/WebForm/WebForm";
 import "./App.css";
 
 const App = () => {
@@ -38,11 +38,11 @@ const App = () => {
 
   return (
     <div>
-      {/* <section id="goal-form">
+      <section id="goal-form">
         <CourseInput onAddGoal={addGoalHandler} />
-      </section> */}
+      </section>
       <section id="goals">
-        {/* {content} */}
+        {content}
         {/* {courseGoals.length > 0 && (
           <CourseGoalList
             items={courseGoals}
@@ -51,7 +51,7 @@ const App = () => {
         ) // <p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
         } */}
       </section>
-      <WebForm />
+      {/* <WebForm /> */}
     </div>
   );
 };
